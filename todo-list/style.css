@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
+body,.todo-container {
   background-color: #f5f5f5;
   color: #444;
   font-family: 'Poppins', sans-serif;

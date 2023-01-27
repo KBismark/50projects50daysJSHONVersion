@@ -5,15 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Todo List</title>
+    <!--Import the JSHON library-->
+    <script src="https://cdn.jsdelivr.net/gh/KBismark/jshon/src/statics/js/jshon.v0.0.1.min.js"></script>
+    <!--
+      Since this is for testing purpose, we import the JSHON web-compiler as well.
+      We don't want to write our JSHON code in the JSON formart. The web-compiler
+      will do the work by converting our JSHON scripts into the required formart.
+    -->
+    <script src="https://cdn.jsdelivr.net/gh/KBismark/jshon/jshon-compiler/web-compiler.min.js"></script>
+
   </head>
   <body>
-    <h1>todos</h1>
-    <form id="form">
-      <input type="text" class="input" id="input" placeholder="Enter your todo" autocomplete="off">
+    <!-- 
+      Our first JSHON script. If we want the JSHON web-compiler to compile the code into
+      plain Javascript, we must add the `type` attribute with the value "jshon"
+     -->
+    <script type="jshon">
 
-      <ul class="todos" id="todos"></ul>
-    </form>
-    <small>Left click to toggle completed. <br> Right click to delete todo</small>
+      //
+      const {
+        createApp, createComponent, render
+      } = JSHON.ui;
+
+      //Our form component
+      function TodoForm(){
+
+        //Set up the component on creation
+        //NOTE: `this.onCreation` is only called once in the components life time.
+        this.onCreation = function(){
+          //NOTE: `this` refers to the components object
+
+          //Initialize the state object
+          this.state = {
+
+            list:[]//we use this to hold references to the todo list items we will create
+          }
+
+          //We must explicitly permit JSHON to keep this state object even when this component
+          //is detached/unmounted from the DOM.
+          this.keepStateOnDetach(true);
+        }
+
+        return (
+          <jshon>
+            <form id="form">
+              <input key="input" type="text" class="input" id="input" placeholder="Enter your todo" autocomplete="off"/>
+
+              <ul class="todos" id="todos">
+              </ul>
+            </form>
+          </jshon>
+        )
+      };
+
+      //In JSHON, you must explicitly convert your component functions into
+      //a JSHON component class.
+      //As a result, we would only have to get a new reference to the TodoForm component
+      //incase we want to create more than one todo form in our application.
+      TodoForm = createComponent(TodoForm);
+
+      //Start the app
+      createApp("/",createComponent(function App(){
+
+        this.onCreation=function(){
+          this.state = {
+            //let's get and hold one referece to the TodoForm component
+            form:TodoForm.getInstanceRef()
+          };
+          this.keepStateOnDetach(true);
+        };
+
+        return (
+          <jshon>
+            <div class="todo-container">
+              <h1>todos</h1>
+              <>{render(this.state.form)}</>
+              <small>Left click to toggle completed. <br/> Right click to delete todo</small>
+            </div>
+          </jshon>
+        )
+      }).getInstanceRef(),function(){},document.body);
+    </script>
+
+    <!--Let's make the JSHON web-compiler compile the above script into javScript-->
+    <script>
+      JSHON.compileScripts();
+    </script>
 
     <script src="script.js"></script>
   </body>
