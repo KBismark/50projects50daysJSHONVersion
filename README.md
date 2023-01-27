@@ -1,9 +1,9 @@
-# 50 Projects in 50 Days - HTML/CSS and JavaScript
+# 50 Projects in 50 Days with JSHON.ui
 
 This is the main repository for all of the projects in the course.
 
--   [Course Link](https://www.udemy.com/course/50-projects-50-days)
--   [Course Info Website](https://50projects50days.com)
+-   [Course Link for project with HTML, CSS and JavaScript](https://www.udemy.com/course/50-projects-50-days)
+-   [Main course with HTML, CSS and JavaScript](https://50projects50days.com)
 
 |  #  | Project                                                                                                                     | Live Demo                                                                         |
 | :-: | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
