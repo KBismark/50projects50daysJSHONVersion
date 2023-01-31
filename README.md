@@ -1,11 +1,11 @@
 # 50 Projects in 50 Days with JSHON.ui
 
-This project was forked from the [50 projects within 50 days](https://github.com/bradtraversy/50projects50days) repo.
+This project was forked from the [50 projects within 50 days](https://github.com/bradtraversy/50projects50days) repo.    
 Here in this project, I am recreating all the projects using the [JSHON library](https://github.com/KBismark/jshon) I created.
 
 
-|  #  | Project                                                                                                                     | Live Demo                                                                         |
-| :-: | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |  JSHON version |
+|  #  | Project                                                                                                                     | Live Demo                                                                         |  JSHON version |
+| :-: | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------- |
 | 01  | [Expanding Cards](https://github.com/bradtraversy/50projects50days/tree/master/expanding-cards)                             | [Live Demo](https://50projects50days.com/projects/expanding-cards/)               |       ❌      |
 | 02  | [Progress Steps](https://github.com/bradtraversy/50projects50days/tree/master/progress-steps)                               | [Live Demo](https://50projects50days.com/projects/progress-steps/)                |       ❌      |
 | 03  | [Rotating Navigation Animation](https://github.com/bradtraversy/50projects50days/tree/master/rotating-nav-animation)                       | [Live Demo](https://50projects50days.com/projects/rotating-navigation-animation/) |
