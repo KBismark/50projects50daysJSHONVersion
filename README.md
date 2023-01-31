@@ -1,9 +1,8 @@
 # 50 Projects in 50 Days with JSHON.ui
 
-This is the main repository for all of the projects in the course.
+This project was forked from the [50 projects within 50 days](https://github.com/bradtraversy/50projects50days) repo.
+Here in this project, I am recreating all the projects using the [JSHON library](https://github.com/KBismark/jshon) I created.
 
--   [Course Link for project with HTML, CSS and JavaScript](https://www.udemy.com/course/50-projects-50-days)
--   [Main course with HTML, CSS and JavaScript](https://50projects50days.com)
 
 |  #  | Project                                                                                                                     | Live Demo                                                                         |
 | :-: | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
